@@ -13,7 +13,7 @@ tmpdir=$(mktemp --quiet --directory)
 cp --recursive ./src/* "${tmpdir}"
 git checkout gh-pages
 rm --recursive --force *
-cp --recursive "${tmpdir}/*" .
+cp --recursive "${tmpdir}"/* .
 rm --recursive --force "${tmpdir}"
 git add .
 git commit --message 'Bump GitHub Pages'
