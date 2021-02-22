@@ -1,0 +1,125 @@
+:root {
+    /* Source: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+    --cultured: #f8f9faff;
+    --cultured-2: #e9ecefff;
+    --gainsboro: #dee2e6ff;
+    --light-gray: #ced4daff;
+    --cadet-blue-crayola: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --davys-grey: #495057ff;
+    --gunmetal: #343a40ff;
+    --charleston-green: #212529ff;
+}
+
+/* Hide input spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@font-face {
+    font-family: RobotoMonoRegular;
+    src: url(fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMonoBold;
+    src: url(fonts/RobotoMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: RobotoMonoItalic;
+    src: url(fonts/RobotoMono-Italic.ttf);
+}
+
+@font-face {
+    font-family: RobotoMonoBoldItalic;
+    src: url(fonts/RobotoMono-BoldItalic.ttf);
+}
+
+* {
+    font-family: RobotoMonoRegular;
+}
+
+a:link, a:visited,
+a:hover, a:active {
+    color: var(--gainsboro);
+}
+
+body {
+    background-color: var(--charleston-green);
+    color: var(--gainsboro);
+}
+
+input, select {
+    border-radius: 0px;
+    padding: 2px;
+    background-color: var(--cadet-blue-crayola);
+}
+
+button {
+    border-radius: 0px;
+    padding: 5px;
+    background-color: var(--cadet-blue-crayola);
+}
+
+#calc-container {
+    border-style: dotted;
+    border-width: 1px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.bold {
+    font-family: RobotoMonoBold;
+}
+
+.italic {
+    font-family: RobotoMonoItalic;
+}
+
+.bold-italic {
+    font-family: RobotoMonoBoldItalic;
+}
+
+td.input {
+    padding-left: 5px;
+}
+
+#td-calc-button {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.td-result {
+    padding-left: 10px;
+}
+
+#result-profit {
+    font-size: 24px;
+}
+
+td.profit {
+    height: 32px; /* Avoid table resizing when injecting text */
+    vertical-align: bottom;
+}
+
+table#footnotes td {
+    vertical-align: top;
+}
+
+table#footnotes ul {
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+}
+
+table#footnotes {
+    font-size: 14px;
+}

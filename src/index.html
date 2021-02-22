@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kraken Bitcoin Profit Calculator</title>
+    <meta name="description" content="Calculate profit when trading bitcoins on Kraken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="bold">Kraken Bitcoin Profit Calculator</h2>
+    <p>
+        <span class="italic">Warning</span>: Because Kraken fees can change without notice at any time, this calculator
+        may not be accurate.
+    </p>
+    <div id="calc-container">
+        <form id="calc">
+            <table>
+                <tr>
+                    <td><label for="currency">Currency:</label></td>
+                    <td class="input">
+                        <select id="currency" onchange="onSelectCurrency()" autocomplete="off">
+                            <option value="usd" selected>USD</option>
+                            <option value="eur">EUR</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bold" colspan="2">Buy</td>
+                </tr>
+                <tr>
+                    <td><label for="buy-cost">Amount<sup>1</sup>:</label></td>
+                    <td class="input"><input id="buy-cost" type="number" step="any" autocomplete="off"></td>
+                    <td class="currency-symbol">$</td>
+                </tr>
+                <tr>
+                    <td><label for="buy-price">Bitcoin price:</label></td>
+                    <td class="input"><input id="buy-price" type="number" step="any" autocomplete="off"></td>
+                    <td class="currency-symbol">$</td>
+                </tr>
+                <tr>
+                    <td class="bold" colspan="2">Sell</td>
+                </tr>
+                <tr>
+                    <td><label for="sell-price">Bitcoin price:</label></td>
+                    <td class="input"><input id="sell-price" type="number" step="any" autocomplete="off"></td>
+                    <td class="currency-symbol">$</td>
+                </tr>
+                <tr>
+                    <td><label for="sell-tx-fee">Transaction fee<sup>2</sup>:</label></td>
+                    <td class="input"><input id="sell-tx-fee" type="number" step="any" autocomplete="off"></td>
+                    <td class="currency-symbol">$</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="td-calc-button"><button type="button" onclick="updateResult()">Calculate</button></td>
+                </tr>
+            </table>
+        </form>
+        <table id="table-results">
+            <tr>
+                <td class="profit">Profit:</td>
+                <td class="td-result bold profit" id="result-profit"></td>
+            </tr>
+            <tr>
+                <td>Buy order fee:</td>
+                <td class="td-result" id="result-buy-fee"></span></td>
+            </tr>
+            <tr>
+                <td>Sell order fee:</td>
+                <td class="td-result" id="result-sell-fee"></span></td>
+            </tr>
+        </table>
+    </div>
+    <table id="footnotes">
+        <tr>
+            <td><sup>1</sup></td>
+            <td>Amount of bitcoins to buy, expressed in FIAT currency</td>
+        </tr>
+        <tr>
+            <td><sup>2</sup></td>
+            <td>Transaction fee paid to miners when sending bitcoins to Kraken</td>
+        </tr>
+    </table>
+    <h2 id="what-is-this">What is this?</h2>
+    <p>This is a simple profit calculator for the casual long-term Bitcoin investor. As such, and unlike other
+        calculators, it assumes that bitcoins are not left in the exchange, but rather transferred to a personal wallet.
+    </p>
+    <p>A few assumptions are made that may not work for everybody:</p>
+    <ul>
+        <li>Once bought, bitcoins are withdrawn to a personal wallet, meaning that a withdrawal fee is charged</li>
+        <li>Before selling, bitcoins are sent from the personal wallet back to Kraken, meaning that a transaction fee is
+            charged</li>
+        <li>Buy and sell orders are market orders, meaning that a taker fee is charged</li>
+        <li>The 30-day trading volume is 0$</li>
+        <li>All deposit/withdrawal minimums are met</li>
+    </ul>
+    <p>In particular, the following fee values are used:</p>
+    <ul>
+        <li>Taker order: 0.26%</li>
+        <li>XBT withdrawal: 0.00015₿</li>
+        <li>USD withdrawal (FedWire): 4$</li>
+        <li>EUR withdrawal (Fidor AG): 0.09€</li>
+    </ul>
+    <hr>
+    <div style="text-align: center;">Source on <a href="">GitHub</a></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
