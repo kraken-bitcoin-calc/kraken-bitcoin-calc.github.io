@@ -123,3 +123,7 @@ table#footnotes ul {
 table#footnotes {
     font-size: 14px;
 }
+
+#footer {
+    text-align: center;
+}
