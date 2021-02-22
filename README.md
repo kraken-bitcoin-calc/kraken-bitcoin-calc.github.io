@@ -23,7 +23,7 @@ In particular, the following fee values are used:
 
 ## How to use
 
-This application does not need a network connection to work. All calculations are done client-side, so it is even possibile to download the project repository and open `index.html` locally.
+The calculator is available at <https://kraken-bitcoin-calc.github.io>. Alternatively, it is possibile to download the project repository and open `index.html` locally.
 
 ## Contributing
 
