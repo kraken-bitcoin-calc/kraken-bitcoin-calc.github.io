@@ -134,3 +134,10 @@ table#footnotes ul {
     height: 0px;
     border-style: dotted;
 }
+
+/* Reduce input width on smartphones to prevent wrapping */
+@media (max-width: 576px) {
+    input {
+        max-width: 135px;
+    }
+}
