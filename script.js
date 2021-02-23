@@ -15,6 +15,16 @@ function updateResult() {
     var sellXbtPrice = parseFloat(document.getElementById("sell-price").value);
     var sellTxFee = parseFloat(document.getElementById("sell-tx-fee").value);
 
+    // Validate form values
+    if (!currency in CURRENCY_SYMBOLS) {
+        showError();
+        return;
+    }
+    if (isNaN(buyXbtPrice) || isNaN(buyOrderCost) || isNaN(sellXbtPrice) || isNaN(sellTxFee)) {
+        showError();
+        return;
+    }
+
     var [profit, buyOrderFee, sellOrderFee]  = calcProfitAndFees(buyXbtPrice, buyOrderCost, sellXbtPrice, sellTxFee, currency);
     if (profit < 0) {
         document.getElementById("result-profit").style.color = "red";
@@ -50,6 +60,13 @@ function onSelectCurrency() {
     document.querySelectorAll(".currency-symbol").forEach(e => {
         e.innerText = CURRENCY_SYMBOLS[currency];
     });
+}
+
+function showError() {
+    document.getElementById("result-profit").innerText = "Error!";
+    document.getElementById("result-profit").style.color = "red";
+    document.getElementById("result-buy-fee").innerText = "";
+    document.getElementById("result-sell-fee").innerText = "";
 }
 
 if (typeof exports !== 'undefined') {
