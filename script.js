@@ -31,9 +31,9 @@ function updateResult() {
     } else {
         document.getElementById("result-profit").style.color = "green";
     }
-    document.getElementById("result-profit").innerText = formatNumber(profit) + CURRENCY_SYMBOLS[currency];
-    document.getElementById("result-buy-fee").innerText = formatNumber(buyOrderFee) + CURRENCY_SYMBOLS[currency];
-    document.getElementById("result-sell-fee").innerText = formatNumber(sellOrderFee) + CURRENCY_SYMBOLS[currency];
+    document.getElementById("result-profit").innerText = formatNumber(profit, currency);
+    document.getElementById("result-buy-fee").innerText = formatNumber(buyOrderFee, currency);
+    document.getElementById("result-sell-fee").innerText = formatNumber(sellOrderFee, currency);
 }
 
 function calcProfitAndFees(buyXbtPrice, buyOrderCost, sellXbtPrice, sellTxFee, currency) {
@@ -51,8 +51,16 @@ function calcProfitAndFees(buyXbtPrice, buyOrderCost, sellXbtPrice, sellTxFee, c
     return [profit, buyOrderFee, sellOrderFee];
 }
 
-function formatNumber(n) {
-    return parseFloat(n.toFixed(2)).toLocaleString("en");
+function formatNumber(n, currency) {
+    var s = n.toLocaleString("en-US", {
+        style: "currency",
+        currency: currency,
+        minimumFractionDigits: 2
+    });
+    if (s == "-" + CURRENCY_SYMBOLS[currency] + "0.00") {
+        s = s.substring(1); // Remove negative sign
+    }
+    return s;
 }
 
 function onSelectCurrency() {
@@ -70,5 +78,8 @@ function showError() {
 }
 
 if (typeof exports !== 'undefined') {
-    exports.calcProfitAndFees = calcProfitAndFees;
+    module.exports = { 
+        calcProfitAndFees,
+        formatNumber
+    };
 }
