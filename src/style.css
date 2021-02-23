@@ -127,3 +127,8 @@ table#footnotes ul {
 #footer {
     text-align: center;
 }
+
+#footer-sep {
+    height: 0px;
+    border-style: dotted;
+}
