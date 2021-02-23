@@ -12,7 +12,7 @@ fi
 tmpdir=$(mktemp --quiet --directory)
 cp --recursive ./src/* "${tmpdir}"
 git checkout gh-pages
-rm --recursive --force *
+find . -not -name 'node_modules' -delete
 cp --recursive "${tmpdir}"/* .
 rm --recursive --force "${tmpdir}"
 git add .
