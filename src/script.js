@@ -20,7 +20,7 @@ function updateResult() {
         showError();
         return;
     }
-    if (isNaN(buyXbtPrice) || buyXbtPrice <= 0 || isNaN(buyOrderCost) || buyOrderCost <= 0 || isNaN(sellXbtPrice) || sellXbtPrice <= 0 || isNaN(sellTxFee) || sellTxFee <= 0) {
+    if (isNaN(buyXbtPrice) || buyXbtPrice <= 0 || isNaN(buyOrderCost) || buyOrderCost <= 0 || isNaN(sellXbtPrice) || sellXbtPrice <= 0 || isNaN(sellTxFee) || sellTxFee < 0) {
         showError();
         return;
     }
