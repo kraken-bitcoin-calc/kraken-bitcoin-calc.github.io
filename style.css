@@ -93,7 +93,7 @@ a:hover, a:active {
     border-style: dotted;
     border-width: 1px;
     padding: 5px;
-    max-width: 400px;
+    display: inline-block;
 }
 
 /* Calculator input */
