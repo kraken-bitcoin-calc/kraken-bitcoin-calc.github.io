@@ -1,3 +1,5 @@
+/* Definitions */
+
 :root {
     /* Source: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
     --cultured: #f8f9faff;
@@ -9,18 +11,6 @@
     --davys-grey: #495057ff;
     --gunmetal: #343a40ff;
     --charleston-green: #212529ff;
-}
-
-/* Hide input spinners */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
 }
 
 @font-face {
@@ -43,18 +33,26 @@ input[type=number] {
     src: url(fonts/RobotoMono-BoldItalic.ttf);
 }
 
+/* Global rules */
+
 * {
     font-family: RobotoMonoRegular;
 }
 
-a:link, a:visited,
-a:hover, a:active {
+body {
+    margin: 10px;
+    background-color: var(--charleston-green);
     color: var(--gainsboro);
 }
 
-body {
-    background-color: var(--charleston-green);
-    color: var(--gainsboro);
+/* Hide input spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 input, select {
@@ -63,29 +61,15 @@ input, select {
     background-color: var(--cadet-blue-crayola);
 }
 
-#calc input[type="number"] {
-    width: 100%;
-}
-
-#calc td.input {
-    padding-right: 10px;
-}
-
-#calc td {
-    white-space: nowrap;
-}
-
 button {
     border-radius: 0px;
     padding: 5px;
     background-color: var(--cadet-blue-crayola);
 }
 
-#calc-container {
-    border-style: dotted;
-    border-width: 1px;
-    padding: 5px;
-    max-width: 400px;
+a:link, a:visited,
+a:hover, a:active {
+    color: var(--gainsboro);
 }
 
 .bold {
@@ -100,43 +84,61 @@ button {
     font-family: RobotoMonoBoldItalic;
 }
 
-.currency-symbol {
+.footnote {
+    font-size: 14px;
+}
+
+/* Calculator container */
+
+#calc-container {
+    border-style: dotted;
+    border-width: 1px;
+    padding: 5px;
+    max-width: 400px;
+}
+
+/* Calculator input */
+
+#calc-input td {
+    white-space: nowrap;
+}
+
+#calc-input td.space-under {
+    padding-bottom: 15px;
+}
+
+#calc-input input[type="number"] {
+    width: 100%;
+}
+
+#calc-input td.input {
+    padding-right: 10px;
+}
+
+#calc-input td.currency-symbol {
     padding-left: 5px;
 }
 
-#td-calc-button {
+#calc-input td#update-result {
     text-align: right;
 }
 
-.td-result {
+/* Calculator result */
+
+#calc-result td.result-value {
     padding-left: 10px;
 }
 
-#result-profit {
+#calc-result td#result-profit {
     font-size: 24px;
 }
 
-td.profit {
+#calc-result td.profit {
     height: 32px; /* Avoid table resizing when injecting text */
     vertical-align: bottom;
 }
 
-td.space-under {
-    padding-bottom: 15px;
-}
-
-table#footnotes td {
-    vertical-align: top;
-}
-
-table#footnotes ul {
-    margin: 0px 0px 0px 20px;
-    padding: 0px;
-}
-
-.footnotes {
-    font-size: 14px;
-}
+/* Footer */
 
 #footer {
     border-top: 1px dotted;
