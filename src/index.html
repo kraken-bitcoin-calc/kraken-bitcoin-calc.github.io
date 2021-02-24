@@ -18,7 +18,7 @@
         may not be accurate.
     </p>
     <div id="calc-container">
-        <form id="calc">
+        <form id="calc-input">
             <table>
                 <tr>
                     <td class="space-under" colspan="2"><label for="currency">Currency:</label></td>
@@ -57,26 +57,26 @@
                 </tr>
                 <tr>
                     <td class="space-under" colspan="2"></td>
-                    <td id="td-calc-button" class="space-under"><button type="button" onclick="updateResult()">Calculate</button></td>
+                    <td id="update-result" class="space-under"><button type="button" onclick="updateResult()">Calculate</button></td>
                 </tr>
             </table>
         </form>
-        <table id="table-results">
+        <table id="calc-result">
             <tr>
                 <td class="profit">Profit:</td>
-                <td class="td-result bold profit" id="result-profit"></td>
+                <td class="result-value bold profit" id="result-profit"></td>
             </tr>
             <tr>
                 <td>Buy order fee:</td>
-                <td class="td-result" id="result-buy-fee"></span></td>
+                <td class="result-value" id="result-buy-fee"></span></td>
             </tr>
             <tr>
                 <td>Sell order fee:</td>
-                <td class="td-result" id="result-sell-fee"></span></td>
+                <td class="result-value" id="result-sell-fee"></span></td>
             </tr>
         </table>
     </div>
-    <table class="footnotes">
+    <table class="footnote">
         <tr>
             <td><sup>1</sup></td>
             <td>Amount of bitcoins to buy, expressed in FIAT currency</td>
@@ -106,7 +106,7 @@
         <li>USD withdrawal (FedWire): 4$</li>
         <li>EUR withdrawal (Fidor AG): 0.09€</li>
     </ul>
-    <div class="footnotes" id="footer">Source on <a href="https://github.com/kraken-bitcoin-calc/kraken-bitcoin-calc.github.io">GitHub</a></div>
+    <div class="footnote" id="footer">Source on <a href="https://github.com/kraken-bitcoin-calc/kraken-bitcoin-calc.github.io">GitHub</a></div>
     <script src="script.js"></script>
 </body>
 
