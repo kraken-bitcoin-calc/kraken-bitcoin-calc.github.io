@@ -55,15 +55,40 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-input, select {
-    border-radius: 0px;
+input {
+    color: var(--charleston-green);
     background-color: var(--cadet-blue-crayola);
+    border-top-color: var(--slate-gray);
+    border-left-color: var(--slate-gray);
+    border-bottom-color: var(--gainsboro);
+    border-right-color: var(--gainsboro);
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 2px;
+}
+
+button, select {
+    color: var(--charleston-green);
+    background-color: var(--cadet-blue-crayola);
+    border-top-color: var(--gainsboro);
+    border-left-color: var(--gainsboro);
+    border-bottom-color: var(--slate-gray);
+    border-right-color: var(--slate-gray);
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 2px;
 }
 
 button {
-    border-radius: 0px;
     padding: 5px;
-    background-color: var(--cadet-blue-crayola);
+    cursor: pointer;
+}
+
+button:active {
+    border-top-color: var(--slate-gray);
+    border-left-color: var(--slate-gray);
+    border-bottom-color: var(--gainsboro);
+    border-right-color: var(--gainsboro);
 }
 
 a:link, a:visited,
