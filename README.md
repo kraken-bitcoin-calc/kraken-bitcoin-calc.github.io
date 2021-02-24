@@ -11,15 +11,15 @@ A few assumptions are made that may not work for everybody:
 - Once bought, bitcoins are withdrawn to a personal wallet, meaning that a withdrawal fee is charged
 - Before selling, bitcoins are sent from the personal wallet back to Kraken, meaning that a transaction fee is charged
 - Buy and sell orders are market orders, meaning that a taker fee is charged
-- The 30-day trading volume is 0$
+- The 30-day trading volume is $0.00
 - All deposit/withdrawal minimums are met
 
 In particular, the following fee values are used:
 
 - Taker order: 0.26%
-- XBT withdrawal: 0.00015₿
-- USD withdrawal (FedWire): 4$
-- EUR withdrawal (Fidor AG): 0.09€
+- XBT withdrawal: ₿0.00015
+- USD withdrawal (FedWire): $4.00
+- EUR withdrawal (Fidor AG): €0.09
 
 ## How to use
 
@@ -27,11 +27,11 @@ The calculator is available at <https://kraken-bitcoin-calc.github.io>. Alternat
 
 ## Contributing
 
-I would rather keep the scope of this project limited. Because of this, I won’t accept pull requests implementing new features, such as adding support for other currencies. Bug reports and pull requests fixing bugs are of course welcome.
+The scope of this project is intended to be limited. Because of this, pull requests implementing new features such as adding support for other currencies will not be merged. Bug reports and pull requests fixing bugs are of course welcome.
 
 After making changes, tests can be run as follows:
 
 ```
-npm install --also-dev
+npm install --also-dev # Needed only once
 npm run test
 ```
