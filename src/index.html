@@ -35,12 +35,12 @@
                 <tr>
                     <td><label for="buy-cost">Amount<sup>1</sup>:</label></td>
                     <td class="currency-symbol">$</td>
-                    <td class="input"><input id="buy-cost" type="number" step="any" autocomplete="off" required></td>
+                    <td class="input"><input id="buy-cost" type="number" step="any" autocomplete="off" onkeypress="handleKey(event)" required></td>
                 </tr>
                 <tr>
                     <td class="space-under"><label for="buy-price">Bitcoin price:</label></td>
                     <td class="currency-symbol space-under">$</td>
-                    <td class="input space-under"><input id="buy-price" type="number" step="any" autocomplete="off" required></td>
+                    <td class="input space-under"><input id="buy-price" type="number" step="any" autocomplete="off" onkeypress="handleKey(event)" required></td>
                 </tr>
                 <tr>
                     <td class="bold" colspan="2">Sell</td>
@@ -48,12 +48,12 @@
                 <tr>
                     <td><label for="sell-price">Bitcoin price:</label></td>
                     <td class="currency-symbol">$</td>
-                    <td class="input"><input id="sell-price" type="number" step="any" autocomplete="off" required></td>
+                    <td class="input"><input id="sell-price" type="number" step="any" autocomplete="off" onkeypress="handleKey(event)" required></td>
                 </tr>
                 <tr>
                     <td class="space-under"><label for="sell-tx-fee">Transaction fee<sup>2</sup>:</label></td>
                     <td class="currency-symbol space-under">$</td>
-                    <td class="input space-under"><input id="sell-tx-fee" type="number" step="any" autocomplete="off" required></td>
+                    <td class="input space-under"><input id="sell-tx-fee" type="number" step="any" autocomplete="off" onkeypress="handleKey(event)" required></td>
                 </tr>
                 <tr>
                     <td class="space-under" colspan="2"></td>
