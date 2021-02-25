@@ -83,3 +83,10 @@ if (typeof exports !== 'undefined') {
         formatNumber
     };
 }
+
+function handleKey(e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        updateResult();
+    }
+}
