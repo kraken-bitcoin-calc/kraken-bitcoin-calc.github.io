@@ -1,4 +1,4 @@
-const target = require('../src/script');
+const target = require('../src/js/main');
 
 test('EUR fees', () => {
     var [profit, buyOrderFee, sellOrderFee] = target.calcProfitAndFees(1000, 500, 50000, 10, "eur");

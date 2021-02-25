@@ -15,22 +15,22 @@
 
 @font-face {
     font-family: RobotoMonoRegular;
-    src: url(fonts/RobotoMono-Regular.ttf);
+    src: url(../font/RobotoMono-Regular.ttf);
 }
 
 @font-face {
     font-family: RobotoMonoBold;
-    src: url(fonts/RobotoMono-Bold.ttf);
+    src: url(../font/RobotoMono-Bold.ttf);
 }
 
 @font-face {
     font-family: RobotoMonoItalic;
-    src: url(fonts/RobotoMono-Italic.ttf);
+    src: url(../font/RobotoMono-Italic.ttf);
 }
 
 @font-face {
     font-family: RobotoMonoBoldItalic;
-    src: url(fonts/RobotoMono-BoldItalic.ttf);
+    src: url(../font/RobotoMono-BoldItalic.ttf);
 }
 
 /* Global rules */
