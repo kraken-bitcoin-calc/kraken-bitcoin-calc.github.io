@@ -1,4 +1,4 @@
-## Kraken Bitcoin Profit Calculator
+# Kraken Bitcoin Profit Calculator
 
 *Warning*: Because Kraken fees can change without notice at any time, this calculator may not be accurate.
 
