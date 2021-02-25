@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
 
-dir='src'
-remote='origin'
-branch='gh-pages'
+set -o errexit
+set -o nounset
+set -o pipefail
 
-read -p "Pushing directory '${dir}' to ${remote}/${branch}. Are you sure? [y/n]: " answer
+source_dir='src'
+source_branch='develop'
+target_branch='gh-pages'
+remote='origin'
+
+function deploy {
+    git checkout ${source_branch}
+    git subtree split --prefix "${source_dir}" --branch ${target_branch}
+    git push --force ${remote} ${target_branch}:${target_branch}
+    git branch --delete --force ${target_branch}
+}
+
+read -p "Pushing directory '${source_dir}' to ${remote}/${target_branch}. Are you sure? [y/n]: " answer
 case ${answer} in
-    [yY]) git subtree push --prefix ${dir} ${remote} ${branch} ;;
+    [yY]) deploy ;;
     *)    echo 'Cancelled.' ;;
 esac
