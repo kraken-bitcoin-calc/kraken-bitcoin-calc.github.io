@@ -65,9 +65,10 @@ input {
     border-style: solid;
     border-radius: 0px;
     border-width: 2px;
+    padding: 2px;
 }
 
-button, select {
+select {
     color: var(--charleston-green);
     background-color: var(--cadet-blue-crayola);
     border-top-color: var(--gainsboro);
@@ -77,9 +78,19 @@ button, select {
     border-style: solid;
     border-radius: 0px;
     border-width: 2px;
+    padding: 2px;
 }
 
 button {
+    color: var(--charleston-green);
+    background-color: var(--cadet-blue-crayola);
+    border-top-color: var(--gainsboro);
+    border-left-color: var(--gainsboro);
+    border-bottom-color: var(--slate-gray);
+    border-right-color: var(--slate-gray);
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 2px;
     padding: 5px;
     cursor: pointer;
 }
