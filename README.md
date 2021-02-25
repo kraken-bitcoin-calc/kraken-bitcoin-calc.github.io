@@ -32,6 +32,6 @@ The scope of this project is intended to be limited. Because of this, pull reque
 After making changes, tests can be run as follows:
 
 ```
-npm install --also-dev # Needed only once
+npm install # Needed only once
 npm run test
 ```
