@@ -9,6 +9,7 @@ source_branch='develop'
 target_branch='gh-pages'
 remote='origin'
 
+# Credits: https://damianavila.github.io/blog/posts/one-line-deployment-of-your-site-to-gh-pages.html
 function deploy {
     git checkout ${source_branch}
     git subtree split --prefix "${source_dir}" --branch ${target_branch}
