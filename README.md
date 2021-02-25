@@ -33,5 +33,5 @@ After making changes, tests can be run as follows:
 
 ```
 npm install # Needed only once
-npm run test
+npm test
 ```
