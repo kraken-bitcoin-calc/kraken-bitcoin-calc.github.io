@@ -77,16 +77,16 @@ function showError() {
     document.getElementById("result-sell-fee").innerText = "";
 }
 
-if (typeof exports !== 'undefined') {
-    module.exports = { 
-        calcProfitAndFees,
-        formatNumber
-    };
-}
-
 function handleKey(e) {
     if (e.keyCode === 13) {
         e.preventDefault();
         updateResult();
     }
+}
+
+if (typeof exports !== 'undefined') {
+    module.exports = { 
+        calcProfitAndFees,
+        formatNumber
+    };
 }
