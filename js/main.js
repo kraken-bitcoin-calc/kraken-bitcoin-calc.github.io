@@ -84,7 +84,7 @@ function handleKey(e) {
     }
 }
 
-if (typeof exports !== 'undefined') {
+if (typeof exports !== "undefined") {
     module.exports = { 
         calcProfitAndFees,
         formatNumber
